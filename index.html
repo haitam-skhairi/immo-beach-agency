@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/eagle.css" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;700&display=swap">
+    <title>Special Design</title>
+</head>
+
+<body>
+    <!-- Start Setting Bar -->
+
+    <div class="setting-bar">
+
+        <div class="icon">
+            <i class="fa-solid fa-gear"></i>
+        </div>
+
+        <div class="box">
+            <h4>Choose Best Color</h4>
+            <ul class="colors">
+                <li data-color="#ff9800" class="active"></li>
+                <li data-color="#ff5722"></li>
+                <li data-color="#4caf50"></li>
+                <li data-color="#009688"></li>
+                <li data-color="#ffeb3b"></li>
+            </ul>
+        </div>
+
+        <div class="box">
+            <h4>Random Background</h4>
+            <div class="random-bg">
+                <span data-random="play" class="play active">Play</span>
+                <span data-random="pause" class="pause">Pause</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Setting Bar -->
+
+    <!-- Start header -->
+
+    <header class="header">
+
+        <div class="container">
+            <div class="logo">Eagle <span>Immo</span></div>
+
+            <nav class="links">
+                <a href="#" class="active" data-section=".landing">Home</a>
+                <a href="#" data-section=".about-us">About Us</a>
+                <a href="#" data-section=".skills">Skills</a>
+                <a href="#" data-section=".gallery">Our gallery</a>
+                <a href="#" data-section=".outline">Outline</a>
+                <a href="#" data-section=".features">Features</a>
+                <a href="#" data-section=".contact-us">Contact Us</a>
+            </nav>
+
+            <div class="bars-icon">
+                <i class="open fa-solid fa-bars fa-2x"></i>
+                <i class="close fas fa-times fa-2x"></i>
+            </div>
+        </div>
+
+        <nav class="toggel-menu">
+            <a href="#" class="active" data-section=".landing">Home</a>
+            <a href="#" data-section=".about-us">About Us</a>
+            <a href="#" data-section=".skills">Skills</a>
+            <a href="#" data-section=".gallery">Our Gallery</a>
+            <a href="#" data-section=".outline">Outline</a>
+            <a href="#" data-section=".features">Features</a>
+            <a href="#" data-section=".contact-us">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- End Header -->
+
+    <!-- Start Landing -->
+
+    <section class="landing">
+
+        <div class="overly"></div>
+
+        <div class="container">
+            <div class="landing-text">
+                <h1>The <span>Best Way</span> To Find Your Home</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolor accusantium,in dignissimos
+                    facere voluptatem sed laborum iusto eius placeat doloremque consecteturquisquam</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Landing -->
+
+    <!-- Start About Us -->
+    <section class="about-us">
+        <div class="container">
+            <div class="text-about">
+                <h2>About Us</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit quisquam sunt cupiditate nam
+                    obcaecati,
+                    recusandae earum aut! Rerum placeat blanditiis, pariatur inventore consequatur optio necessitatibus,
+                    quia, repellendus eius quis nulla?</p>
+            </div>
+            <div class="img-about">
+                <img src="images/about-us.png" alt="">
+            </div>
+        </div>
+
+    </section>
+
+    <!-- End About Us -->
+
+    <!-- Start Our Skills -->
+
+    <section class="skills">
+        <div class="head-section">
+            <h3>Skills</h3>
+            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt.
+            </p>
+        </div>
+
+        <div class="container">
+
+            <div class="prog-holder">
+                <span class="head">HTML</span>
+                <div class="prog">
+                    <span style="width: 0" data-width="70%"></span>
+                </div>
+            </div>
+
+            <div class="prog-holder">
+                <span class="head">CSS</span>
+                <div class="prog">
+                    <span style="width: 0" data-width="85%"></span>
+                </div>
+            </div>
+
+            <div class="prog-holder">
+                <span class="head">JavaScript</span>
+                <div class="prog">
+                    <span style="width: 0" data-width="80%"></span>
+                </div>
+            </div>
+
+            <div class="prog-holder">
+                <span class="head">PHP</span>
+                <div class="prog">
+                    <span style="width: 0" data-width="60%"></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Start Our Skills -->
+
+    <!-- Start Gallery -->
+
+    <section class="gallery">
+        <div class="head-section">
+            <h3>Gallery</h3>
+            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt.
+            </p>
+        </div>
+        <div class="container">
+            <div class="imgs-gallery">
+                <div class="box">
+                    <img src="images/gallery/1.jpg" alt="Responsive Design">
+                </div>
+                <div class="box">
+                    <img src="images/gallery/2.jpg" alt="Special Design">
+                </div>
+                <div class="box">
+                    <img src="images/gallery/3.jpg" alt="Make Layout">
+                </div>
+                <div class="box">
+                    <img src="images/gallery/4.jpg" alt="Application Mobile">
+                </div>
+                <div class="box">
+                    <img src="images/gallery/5.png" alt="Accessibility">
+                </div>
+                <div class="box">
+                    <img src="images/gallery/6.jpg" alt="Build Website">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Gallery -->
+
+    <!-- Start Outline -->
+
+    <section class="outline">
+        <div class="head-section">
+            <h3>Outline</h3>
+            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt.
+            </p>
+        </div>
+        <div class="container">
+
+            <div class="year-outline">
+                <h4>2020</h4>
+                <div class="box-content left">
+
+                    <div class="box">
+                        <h3>Web development self learning</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque unde eligendi voluptatem
+                            sint
+                            reprehenderit veniam facere, recusandae qui vitae odit cupiditate in! Repellat, itaque
+                            beatae
+                            optio
+                            quod
+                            earum dolor eveniet.</p>
+                    </div>
+                </div>
+                <div class="box-content right">
+                    <div class="box">
+                        <h3>Web development self learning</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque unde eligendi voluptatem
+                            sint
+                            reprehenderit veniam facere, recusandae qui vitae odit cupiditate in! Repellat, itaque
+                            beatae
+                            optio
+                            quod
+                            earum dolor eveniet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-outline">
+                <h4>2021</h4>
+                <div class="box-content left">
+
+                    <div class="box">
+                        <h3>Web development self learning</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque unde eligendi voluptatem
+                            sint
+                            reprehenderit veniam facere, recusandae qui vitae odit cupiditate in! Repellat, itaque
+                            beatae
+                            optio
+                            quod
+                            earum dolor eveniet.</p>
+                    </div>
+                </div>
+                <div class="box-content right">
+                    <div class="box">
+                        <h3>Web development self learning</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque unde eligendi voluptatem
+                            sint
+                            reprehenderit veniam facere, recusandae qui vitae odit cupiditate in! Repellat, itaque
+                            beatae
+                            optio
+                            quod
+                            earum dolor eveniet.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="year-outline">
+                <h4>2022</h4>
+                <div class="box-content left">
+
+                    <div class="box">
+                        <h3>Web development self learning</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque unde eligendi voluptatem
+                            sint
+                            reprehenderit veniam facere, recusandae qui vitae odit cupiditate in! Repellat, itaque
+                            beatae
+                            optio
+                            quod
+                            earum dolor eveniet.</p>
+                    </div>
+                </div>
+                <div class="box-content right">
+                    <div class="box">
+                        <h3>Web development self learning</h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cumque unde eligendi voluptatem
+                            sint
+                            reprehenderit veniam facere, recusandae qui vitae odit cupiditate in! Repellat, itaque
+                            beatae
+                            optio
+                            quod
+                            earum dolor eveniet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Outline -->
+
+    <!-- Start Features -->
+
+    <section class="features">
+        <div class="head-section">
+            <h3>Features</h3>
+            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt.
+            </p>
+        </div>
+        <div class="container">
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-duotone fa-award"></i>
+                </div>
+                <h3>Certification</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur commodi quas ratione dolorem
+                    dignissimos maxime tenetur praesentium corporis quis nihil?</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-duotone fa-basket-shopping"></i>
+                </div>
+                <h3>Market</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur commodi quas ratione dolorem
+                    dignissimos maxime tenetur praesentium corporis quis nihil?</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-duotone fa-battery-three-quarters"></i>
+                </div>
+                <h3>Economic</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur commodi quas ratione dolorem
+                    dignissimos maxime tenetur praesentium corporis quis nihil?</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-duotone fa-binoculars"></i>
+                </div>
+                <h3>Vision</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur commodi quas ratione dolorem
+                    dignissimos maxime tenetur praesentium corporis quis nihil?</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa fa-duotone fa-book"></i>
+                </div>
+                <h3>Knowledge</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur commodi quas ratione dolorem
+                    dignissimos maxime tenetur praesentium corporis quis nihil?</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fa-solid fa-universal-access"></i>
+                </div>
+                <h3>Accessibility</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur commodi quas ratione dolorem
+                    dignissimos maxime tenetur praesentium corporis quis nihil?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- End Features -->
+
+    <!-- Start Contact Us -->
+
+    <section class="contact-us">
+        <div class="head-section">
+            <h3>Contact Us</h3>
+            <p>Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+                Mauris blandit aliquet elit, eget tincidunt.
+            </p>
+        </div>
+        <div class="container">
+            <form action="" method="">
+                <div class="left">
+                    <input type="text" placeholder="Your Full Name">
+                    <input type="text" placeholder="Your Country">
+                    <input type="email" placeholder="Your Email">
+                    <input type="number" placeholder="Your number">
+                </div>
+                <div class="right">
+                    <textarea name="" id="" placeholder="Write Your Request"></textarea>
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- End Contact Us -->
+
+    <!-- Start Footer -->
+    <section class="footer">
+        &copy; 2021 <a href="#">Eagle</a> All Right
+        Reserved
+    </section>
+    <!-- End Footer -->
+    <script src="main.js"></script>
+</body>
+
+</html>

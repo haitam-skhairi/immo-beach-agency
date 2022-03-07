@@ -44,23 +44,16 @@ if (choosedBackground !== null) {
       .classList.add("active");
   }
 }
-// Set Background Tranparent when Scroll bottom
-
-let header = document.querySelector("header");
-let aboutUs = document.querySelector(".about-us");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY >= aboutUs.offsetTop - 70) {
-    header.style.backgroundColor = "rgba(17, 25, 71, 0.8)";
-  } else {
-    header.style.backgroundColor = "rgba(17, 25, 71)";
-  }
-});
 
 // Setting Bar //
 
 let settingBar = document.querySelector(".setting-bar");
 let settingIcon = document.querySelector(".setting-bar .icon i");
+
+// Stop Propagation onclick in Childrens of setting bar
+settingBar.onclick = function (e) {
+  e.stopPropagation();
+};
 
 settingIcon.addEventListener("click", (e) => {
   e.target.classList.toggle("fa-spin");
@@ -86,24 +79,96 @@ settingColorsli.forEach((li) => {
   });
 });
 
+// Close the setting bar when clicking outside of it
+
+document.addEventListener("click", (e) => {
+  if (e.target !== settingBar && e.target !== settingIcon) {
+    settingIcon.classList.remove("fa-spin");
+    settingBar.classList.remove("open");
+  }
+});
+
+// Toggel Menu
+
+const openToggelMenu = document.querySelector("header .bars-icon i.open");
+const closeToggelMenu = document.querySelector("header .bars-icon i.close");
+const toggelMenu = document.querySelector("header .toggel-menu");
+const toggelMenuLinks = document.querySelectorAll("header .toggel-menu a");
+
+openToggelMenu.addEventListener("click", () => {
+  openToggelMenu.style.display = "none";
+  closeToggelMenu.style.display = "block";
+  toggelMenu.classList.add("open");
+});
+
+closeToggelMenu.addEventListener("click", () => {
+  closeToggelMenu.style.display = "none";
+  openToggelMenu.style.display = "block";
+  toggelMenu.classList.remove("open");
+});
+
+toggelMenuLinks.forEach((a) => {
+  a.addEventListener("click", () => {
+    toggelMenu.classList.remove("open");
+    closeToggelMenu.style.display = "none";
+    openToggelMenu.style.display = "block";
+  });
+});
+
+toggelMenuLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Rmove Class Active
+    toggelMenuLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    link.classList.add("active");
+
+    // Scroll to Section
+    document.querySelector(link.dataset.section).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
+
 // Nav Bar
+// const sections = document.querySelectorAll("section");
+const navBarLinks = document.querySelectorAll("header .links a");
 
-const openNavBar = document.querySelector("header .bars-icon i.open");
-const closeNavBar = document.querySelector("header .bars-icon i.close");
-const linksSmallScreen = document.querySelector("header .links-small-screen");
+// console.log(navBarLinks);
 
-openNavBar.addEventListener("click", () => {
-  openNavBar.style.display = "none";
-  closeNavBar.style.display = "block";
-  linksSmallScreen.classList.add("open");
+navBarLinks.forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    // Rmove Class Active
+    navBarLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    link.classList.add("active");
+
+    // Scroll to Section
+    document.querySelector(link.dataset.section).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
 });
-closeNavBar.addEventListener("click", () => {
-  closeNavBar.style.display = "none";
-  openNavBar.style.display = "block";
-  linksSmallScreen.classList.remove("open");
+
+// Set Background Tranparent when Scroll bottom
+
+let header = document.querySelector("header");
+let aboutUs = document.querySelector(".about-us");
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY >= aboutUs.offsetTop - 70) {
+    header.style.backgroundColor = "rgba(17, 25, 71, 0.7)";
+  } else {
+    header.style.backgroundColor = "rgba(17, 25, 71)";
+  }
 });
 
-// Landing Section Random Background //
+// Section Landing Random Background //
 
 let landing = document.querySelector(".landing");
 let landingBgArray = [
@@ -159,7 +224,7 @@ function randomizeImgs() {
 }
 randomizeImgs();
 
-// Skills Section //
+// Section Skills //
 
 let skills = document.querySelector(".skills");
 
