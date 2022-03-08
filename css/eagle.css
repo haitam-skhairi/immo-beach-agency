@@ -1,7 +1,7 @@
 /* Start Variables */
 :root {
     --main-color: #ff9800;
-    --section-color: #111947;
+    --section-color: #161f53;
     --section-padding: 70px;
 }
 /* End Variables */
@@ -273,7 +273,7 @@ header .toggel-menu {
     gap: 20px;
     z-index: -2;
     transition: 1s;
-    transform: translateY(-1000px);
+    transform: translateY(-100vh);
 }
 @media (min-width: 991px) {
     header .toggel-menu {
