@@ -129,12 +129,14 @@ body {
 }
 .setting-bar .box {
     margin: 10px;
-    padding: 10px;
+    padding: 15px;
     background-color: #ececec;
     text-align: center;
 }
+.setting-bar .box h4 {
+    margin-bottom: 15px;
+}
 .setting-bar .box .colors {
-    padding: 10px;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -172,7 +174,7 @@ body {
     color: #fff;
     background-color: #333;
     padding: 5px 10px;
-    margin: 10px 3px;
+    margin: 0 3px;
     font-size: 15px;
     border-radius: 4px;
     cursor: pointer;
@@ -180,6 +182,20 @@ body {
 }
 .setting-bar .box .random-bg span.active {
     opacity: 1;
+}
+.setting-bar .box button {
+    padding: 7px 15px;
+    background-color: rgb(235, 20, 20);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+.setting-bar .box button:hover {
+    background-color: rgb(207, 16, 16);
 }
 
 /* End Setting Bar */
@@ -203,6 +219,9 @@ header .container {
     z-index: 1;
 }
 header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: var(--main-color);
     font-weight: bold;
     font-size: 25px;
@@ -262,7 +281,8 @@ header .bars-icon i.close {
 header .toggel-menu {
     width: 100%;
     height: calc(100vh);
-    background-color: rgb(9, 13, 39);
+    background-color: #090d27;
+    background-size: cover;
     position: absolute;
     left: 0;
     top: 0;
@@ -312,6 +332,9 @@ header .toggel-menu a.active {
     background-size: cover;
     background-position: left top;
     z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .landing .overly {
     position: absolute;
@@ -324,10 +347,10 @@ header .toggel-menu a.active {
 
 .landing .landing-text {
     color: #fff;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    z-index: 2;
+    max-width: 450px;
+    padding: 20px;
     text-align: center;
 }
 .landing .landing-text h1 {
@@ -342,7 +365,7 @@ header .toggel-menu a.active {
 }
 @media (max-width: 767px) {
     .landing .landing-text h1 {
-        font-size: 23px;
+        font-size: 27px;
         line-height: 1.4;
     }
     .landing .landing-text p {
@@ -374,13 +397,37 @@ header .toggel-menu a.active {
     lighting-color: #ff5722;
 }
 .about-us .text-about h2 {
+    position: relative;
     font-size: 40px;
     color: var(--main-color);
+    width: fit-content;
+    margin: auto;
     margin-bottom: 20px;
+}
+@media (max-width: 991px) {
+    .about-us .text-about h2::before {
+        content: '';
+        position: absolute;
+        top: 45px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 3px;
+        width: 40%;
+        background-color: var(--main-color);
+    }
+    .about-us .text-about h2 {
+        font-size: 30px;
+    }
 }
 .about-us .text-about p {
     font-size: 17px;
     line-height: 1.7;
+}
+@media (max-width: 991px) {
+    .about-us .text-about p {
+        line-height: 1.5;
+        font-size: 15px;
+    }
 }
 .about-us .img-about {
     margin: 20px;
@@ -476,7 +523,6 @@ header .toggel-menu a.active {
 }
 .gallery .imgs-gallery .box {
     flex-basis: 100%;
-    height: 250px;
 }
 @media (min-width: 768px) {
     .gallery .imgs-gallery .box {
@@ -715,15 +761,13 @@ header .toggel-menu a.active {
     opacity: 0;
     transition: .3s;
 }
-.contact-us form .left input:focus {
+.contact-us form > div input:focus,
+.contact-us form .right textarea:focus {
     outline: none;
 }
 .contact-us form .right textarea {
     min-height: 170px;
     resize: vertical;
-}
-.contact-us form .right textarea:focus {
-    outline: 1px solid var(--main-color);
 }
 .contact-us form .right input:last-child {
     color: #fff;
@@ -742,11 +786,17 @@ header .toggel-menu a.active {
 
 /* Start Footer */
 .footer {
-    padding: 35px 10px;
+    padding: 27px 10px;
     color: #fff;
     font-size: 18px;
     text-align: center;
     background-color: rgb(10, 16, 53);
+}
+@media (max-width: 767px) {
+    .footer {
+        padding: 18px 10px;
+        font-size: 15px;
+    }
 }
 .footer a {
     text-decoration: none;

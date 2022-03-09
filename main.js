@@ -67,10 +67,9 @@ let settingColorsli = document.querySelectorAll(".setting-bar .box .colors li");
 
 settingColorsli.forEach((li) => {
   li.addEventListener("click", (e) => {
-    settingColorsli.forEach((el) => {
-      el.classList.remove("active");
-    });
-    e.target.classList.add("active");
+    // Hundle Active
+    hundleActive(e);
+
     document.documentElement.style.setProperty(
       "--main-color",
       e.target.dataset.color
@@ -78,6 +77,19 @@ settingColorsli.forEach((li) => {
     localStorage.setItem("main_color", e.target.dataset.color);
   });
 });
+
+// Reset All Setting From the Locale Storage
+
+let resetButton = document.querySelector(".setting-bar .box button");
+
+resetButton.onclick = function () {
+  // clear all items
+  // localStorage.clear();
+  // clear some items
+  localStorage.removeItem("main_color");
+  localStorage.removeItem("choosed_bg");
+  window.location.reload();
+};
 
 // Close the setting bar when clicking outside of it
 
@@ -119,11 +131,8 @@ toggelMenuLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // Rmove Class Active
-    toggelMenuLinks.forEach((link) => {
-      link.classList.remove("active");
-    });
-    link.classList.add("active");
+    // Hundle Active
+    hundleActive(e);
 
     // Scroll to Section
     document.querySelector(link.dataset.section).scrollIntoView({
@@ -136,17 +145,12 @@ toggelMenuLinks.forEach((link) => {
 // const sections = document.querySelectorAll("section");
 const navBarLinks = document.querySelectorAll("header .links a");
 
-// console.log(navBarLinks);
-
 navBarLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
 
-    // Rmove Class Active
-    navBarLinks.forEach((link) => {
-      link.classList.remove("active");
-    });
-    link.classList.add("active");
+    // Hundle Active
+    hundleActive(e);
 
     // Scroll to Section
     document.querySelector(link.dataset.section).scrollIntoView({
@@ -184,11 +188,7 @@ let randomBgSpans = document.querySelectorAll(".setting-bar .random-bg span");
 
 randomBgSpans.forEach((span) => {
   span.addEventListener("click", (e) => {
-    randomBgSpans.forEach((span) => {
-      span.classList.remove("active");
-    });
-
-    e.target.classList.add("active");
+    hundleActive(e);
 
     // Randomize Background if condition
 
@@ -295,3 +295,11 @@ galleryImgs.forEach((img) => {
     };
   });
 });
+
+// Hundle Active State
+function hundleActive(event) {
+  event.target.parentElement.querySelectorAll(".active").forEach((el) => {
+    el.classList.remove("active");
+  });
+  event.target.classList.add("active");
+}
