@@ -596,7 +596,7 @@ header .toggel-menu a.active {
 }
 .outline .year-outline {
     position: relative;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 .outline .year-outline::before {
     content: '';
@@ -610,7 +610,7 @@ header .toggel-menu a.active {
 .outline .year-outline h4 {
     position: absolute;
     left: 50%;
-    top: 20px;
+    top: 0;
     transform: translateX(-50%);
     padding: 3px 5px;
     color: var(--main-color);
@@ -618,6 +618,9 @@ header .toggel-menu a.active {
     border-radius: 5px;
     background-color: #fff;
     font-weight: bold;
+}
+.outline .year-outline:first-child h4 {
+    top: 15px;
 }
 .outline .box-content {
     position: relative;
