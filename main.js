@@ -286,6 +286,19 @@ galleryImgs.forEach((img) => {
     // Append target img in popup box
     popupGallerybox.appendChild(popupGalleryImg);
 
+    // Open New Link See More
+    let popupLink = document.createElement("a");
+
+    popupLink.setAttribute("href", "./test.html");
+    popupLink.setAttribute("target", "_blank");
+
+    popupLink.className = "Open-see-more";
+
+    let popupLinkTextNode = document.createTextNode("See More");
+    popupLink.appendChild(popupLinkTextNode);
+
+    popupGallerybox.appendChild(popupLink);
+
     // Append popup box in body
     document.body.appendChild(popupGallerybox);
 
