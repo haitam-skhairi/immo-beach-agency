@@ -168,7 +168,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY >= aboutUs.offsetTop - 70) {
     header.style.backgroundColor = "rgba(17, 25, 71, 0.7)";
   } else {
-    header.style.backgroundColor = "rgba(17, 25, 71)";
+    header.style.backgroundColor = "transparent";
   }
 });
 
