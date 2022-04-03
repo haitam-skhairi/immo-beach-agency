@@ -224,15 +224,17 @@ function randomizeImgs() {
 }
 randomizeImgs();
 
-// Section Skills //
+// Section Services //
 
-let skills = document.querySelector(".skills");
+let Services = document.querySelector(".Services");
 
-let skillsSpans = document.querySelectorAll(".skills .prog-holder .prog span");
+let ServicesSpans = document.querySelectorAll(
+  ".Services .prog-holder .prog span"
+);
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY >= skills.offsetTop - 100) {
-    skillsSpans.forEach((span) => {
+  if (window.scrollY >= Services.offsetTop - 100) {
+    ServicesSpans.forEach((span) => {
       span.style.width = span.dataset.width;
     });
   }
@@ -289,7 +291,7 @@ galleryImgs.forEach((img) => {
     // Open New Link See More
     let popupLink = document.createElement("a");
 
-    popupLink.setAttribute("href", "./test.html");
+    popupLink.setAttribute("href", "./gallery/test.html");
     popupLink.setAttribute("target", "_blank");
 
     popupLink.className = "Open-see-more";

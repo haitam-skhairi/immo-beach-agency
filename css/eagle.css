@@ -440,16 +440,16 @@ header .toggel-menu a.active {
 
 /* End About Us */
 
-/* Start Skills */
+/* Start Services */
 
-.skills {
+.Services {
     padding-top: var(--section-padding);
     padding-bottom: var(--section-padding);
     background-color: var(--section-color);
     background-color: #0e0a5d;
 
 }
-.skills .prog-holder {
+.Services .prog-holder {
     display: flex;
     width: 80%;
     height: 30px;
@@ -459,11 +459,11 @@ header .toggel-menu a.active {
     border-radius: 5px;
 }
 @media (max-width: 991px) {
-    .skills .prog-holder {
+    .Services .prog-holder {
         width: 90%;
     }
 }
-.skills .prog-holder .head {
+.Services .prog-holder .head {
     margin: auto 15px;
     width: 100px;
     font-weight: bold;
@@ -472,18 +472,18 @@ header .toggel-menu a.active {
     text-align: center;
 }
 @media (max-width: 991px) {
-    .skills .prog-holder .head {
+    .Services .prog-holder .head {
         width: 50px;
         font-size: 13px;
     }
 }
-.skills .prog-holder .prog {
+.Services .prog-holder .prog {
     width: 100%;
     height: 30px;
     padding: 5px;
     overflow: hidden;
 }
-.skills .prog-holder .prog span {
+.Services .prog-holder .prog span {
     display: block;
     position: relative;
     height: 100%;
@@ -491,7 +491,7 @@ header .toggel-menu a.active {
     transition: 1s;
     border-radius: 5px;
 }
-.skills .prog-holder .prog span::after {
+.Services .prog-holder .prog span::after {
     content: attr(data-width);
     font-size: 10px;
     font-weight: bold;
@@ -504,7 +504,7 @@ header .toggel-menu a.active {
     border-radius: 3px;
 }
 
-/* End Skills */
+/* End Services */
 
 /* Start Gallery */
 
@@ -603,7 +603,7 @@ header .toggel-menu a.active {
     margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
-    color: #333;
+    color: #f62424;
     cursor: pointer;
     text-decoration: none;
 }
@@ -635,9 +635,9 @@ header .toggel-menu a.active {
     left: 50%;
     top: 0;
     transform: translateX(-50%);
-    padding: 3px 5px;
-    color: var(--main-color);
-    border: 2px solid var(--main-color);
+    padding: 5px 7px;
+    color: #222;
+    border: 2px solid #222;
     border-radius: 5px;
     background-color: #fff;
     font-weight: bold;
@@ -715,7 +715,7 @@ header .toggel-menu a.active {
 }
 .outline .box-content .box p {
     line-height: 1.6;
-    color: #666;
+    color: #444;
 }
 /* End Outline */
 
