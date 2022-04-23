@@ -291,7 +291,7 @@ galleryImgs.forEach((img) => {
     // Open New Link See More
     let popupLink = document.createElement("a");
 
-    popupLink.setAttribute("href", "./gallery/test.html");
+    popupLink.setAttribute("href", "./html/test.html");
     popupLink.setAttribute("target", "_blank");
 
     popupLink.className = "Open-see-more";

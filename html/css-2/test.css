@@ -1,0 +1,336 @@
+/* Start Variables */
+:root {
+    --main-color: #ff9800;
+    --section-color: #161f53;
+    --section-padding: 70px;
+}
+/* End Variables */
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    /* scroll-behavior: smooth; */
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #161f53;
+    position: relative;
+}
+
+/* Start Grid Systeme */
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media (min-width: 567px) { /* Small Devices => Phones */
+    .container {
+        max-width: 530px;
+    }
+}
+@media (min-width: 768px) { /* Medium Devices => Tablettes */
+    .container {
+        max-width: 720px;
+    }
+}
+@media (min-width: 993px) { /* Desktop */
+    .container {
+        max-width: 970px;
+    }
+}
+@media (min-width: 1200px) { /* Larg Screens */
+    .container {
+        max-width: 1170pxpx;
+    }
+}
+
+/* End Grid Systeme */
+
+.head-section {
+    max-width: 450px;
+    padding: 0 15px;
+    margin: auto;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.head-section h3 {
+    position: relative;
+    font-size: 40px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+.head-section h3::before {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 40%;
+    background-color: var(--main-color);
+}
+.head-section p {
+    color: #fff;
+    line-height: 1.7;
+}
+@media (max-width: 767px) {
+    .head-section h3 {
+        font-size: 30px;
+    }
+    .head-section p {
+        line-height: 1.5;
+        font-size: 15px;
+    }
+    .head-section h3::before {
+        top: 45px;
+    }
+}
+/* Start Setting Bar */
+
+.setting-bar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #fff;
+    z-index: 1000;
+    transition: .5s;
+}
+.setting-bar.open {
+    left: 0;
+}
+.setting-bar.box-shadow {
+    box-shadow: 5px 0 10px rgb(0 0 0 / 20%);
+}
+.setting-bar .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: -30px;
+    top: 140px;
+    background-color: #fff;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd #ddd #ddd transparent;
+}
+.setting-bar .icon i {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+.setting-bar .box {
+    margin: 10px;
+    padding: 15px;
+    background-color: #ececec;
+    text-align: center;
+}
+.setting-bar .box h4 {
+    margin-bottom: 15px;
+}
+.setting-bar .box .colors {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.setting-bar .box .colors li {
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: #000;
+    list-style: none;
+    margin: 3px 5px;
+    opacity: .5;
+    cursor: pointer;
+}
+.setting-bar .box .colors li.active {
+    opacity: 1;
+}
+.setting-bar .box .colors li:first-child {
+    background-color: #ff9800;
+}
+.setting-bar .box .colors li:nth-child(2) {
+    background-color: #ff5722;
+}
+.setting-bar .box .colors li:nth-child(3) {
+    background-color: #4caf50;
+}
+.setting-bar .box .colors li:nth-child(4) {
+    background-color: #009688;
+}
+.setting-bar .box .colors li:last-child {
+    background-color: #ffeb3b;
+}
+.setting-bar .box .random-bg span {
+    display: inline-block;
+    color: #fff;
+    background-color: #333;
+    padding: 5px 10px;
+    margin: 0 3px;
+    font-size: 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: .5;
+}
+.setting-bar .box .random-bg span.active {
+    opacity: 1;
+}
+.setting-bar .box button {
+    padding: 7px 15px;
+    background-color: rgb(235, 20, 20);
+    border: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .3s;
+}
+.setting-bar .box button:hover {
+    background-color: rgb(207, 16, 16);
+}
+
+/* End Setting Bar */
+
+/* Start Header */
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* background-color: rgba(17, 25, 71); */
+    background-color: transparent;
+    padding: 10px;
+    z-index: 2;
+}
+header .container {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    z-index: 1;
+}
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 25px;
+}
+header .logo span {
+    color: #fff;
+}
+header .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width: 991px) {
+    header .links {
+        display: none;
+    }
+}
+header .links a {
+    display: block;
+    padding: 10px 0;
+    margin-left: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: .3s;
+}
+header .links a:hover,
+header .links a.active {
+    color: var(--main-color);
+}
+header .bars-icon {
+    position: relative;
+    display: none;
+    align-items: center;
+    color: var(--main-color);
+}
+@media (max-width: 991px) {
+    header .bars-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+header .bars-icon i {
+    cursor: pointer;
+}
+header .bars-icon i:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+header .bars-icon i.open {
+    display: block;
+}
+header .bars-icon i.close {
+    display: none;
+}
+header .toggel-menu {
+    width: 100%;
+    height: calc(100vh);
+    background-color: #090d27;
+    background-size: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    z-index: -2;
+    transition: 1s;
+    transform: translateY(-100vh);
+}
+@media (min-width: 991px) {
+    header .toggel-menu {
+        display: none;
+    }
+}
+header .toggel-menu.open {
+    transform: translateY(0);
+}
+header .toggel-menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    transition: .3s;
+}
+header .toggel-menu a:hover {
+    transform: scale(1.5);
+    color: var(--main-color);
+}
+header .toggel-menu a.active {
+    color: var(--main-color);
+}
+
+/* End Header */
+
+/* Start Landing */
+
+.landing {
+    color: var(--main-color);
+    height: 100vh;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 50vh;
+}
