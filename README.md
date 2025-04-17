@@ -1,4 +1,4 @@
-# skhairimmo-website-template
+# immo-beach-website-template
 
 ## Demo <br/>
 take a look <br/>
