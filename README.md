@@ -1,4 +1,4 @@
-# eagle-website-template
+# skhairimmo-website-template
 
 ## Demo <br/>
 take a look <br/>
