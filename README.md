@@ -2,4 +2,4 @@
 
 ## Demo <br/>
 take a look <br/>
-https://haitam-skhairi.github.io/skhairi-immo-agency/
+https://haitam-skhairi.github.io/immo-beach-agency/
