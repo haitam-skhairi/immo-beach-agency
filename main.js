@@ -61,6 +61,15 @@ settingIcon.addEventListener("click", (e) => {
   settingBar.classList.toggle("box-shadow");
 });
 
+// Close the setting bar when clicking outside of it
+
+document.addEventListener("click", (e) => {
+  if (e.target !== settingBar && e.target !== settingIcon) {
+    settingIcon.classList.remove("fa-spin");
+    settingBar.classList.remove("open");
+  }
+});
+
 // Setting Colors
 
 let settingColorsli = document.querySelectorAll(".setting-bar .box .colors li");
@@ -90,15 +99,6 @@ resetButton.onclick = function () {
   localStorage.removeItem("choosed_bg");
   window.location.reload();
 };
-
-// Close the setting bar when clicking outside of it
-
-document.addEventListener("click", (e) => {
-  if (e.target !== settingBar && e.target !== settingIcon) {
-    settingIcon.classList.remove("fa-spin");
-    settingBar.classList.remove("open");
-  }
-});
 
 // Toggel Menu
 
@@ -142,7 +142,6 @@ toggelMenuLinks.forEach((link) => {
 });
 
 // Nav Bar
-// const sections = document.querySelectorAll("section");
 const navBarLinks = document.querySelectorAll("header .links a");
 
 navBarLinks.forEach((link) => {
